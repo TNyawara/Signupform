@@ -1,3 +1,4 @@
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -23,10 +24,13 @@ $yourGender = $conn->real_escape_string($_POST['gender']);
 $sql = "INSERT INTO `registerform`(`First_Name`, `Last_ Name`, `Email`, `Username`, `Password`, `Gender`, `DOB`, `Secret_word`) VALUES ('".$yourFirstName."', '".$yourLastName."','".$yourEmail."', '".$yourUsername."','".$yourPassword."', '".$yourGender."','".$yourDateOfBirth."', '".$yourSecretword."')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Registration Complete";
+    #echo "Registration Complete";
+	header("Location: message.php");
+
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
 ?>
+<!--<div id="msg" name="message">Congratulations You Sign Up successfully!!</div>-->
