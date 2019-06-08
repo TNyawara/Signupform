@@ -14,7 +14,7 @@ if(!isset($_SESSION['login_user']) || !isset($_SESSION['login_password'])){
 <body>
  <div class="cong">
  <h2 style="color: white">Welcome</h2>
- <b id="welcome">Here are your details : <br/><i><?php echo $login_session; ?></i></b>
+ <b id="welcome">Here are your details : <br/><i><?php echo $login_sessions; ?></i></b>
  <br/><br/>
  <b id="logout"><a href="logout.php">Log Out</a></b>
  </div>
