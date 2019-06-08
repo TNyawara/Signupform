@@ -8,48 +8,35 @@ if(!isset($_SESSION['login_user']) || !isset($_SESSION['login_password'])){
 <!DOCTYPE html>
 <html>
 	<head>
-	<style>
+	
+<style>
 
-		body
+body
 {
-    background-color: lightblue;
-    
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #fff;
+    background: url(background.jpg);
+    background-size: cover;
 }
-a
-{
-    color: yellow;
-    font-family:Tahoma, Geneva, sans-serif;
-    margin-left: 30px;
-}
-.congs
-{
-    background: rgba(44,62,80,0.7);
-    height:auto;
-    width: 100%;
-}
-
 .signup
 {
+	
+    color: yellow;
     background:rgba(44, 62, 80, 0.7);
-    padding:40px;
-    width:270px;
-    margin:auto;
-    margin-top:80px;
-    height:auto;
-    min-height:430px;
-    margin-left:180px;
-    margin:0 auto;
-    margin-top:90px;
+	width:100%;
+	height:auto;
+	
+	
 }
 form
 {
-    width: 240px;
+    width: 100%;
     text-align: center;
 }
 input
 {
     
-    width: 240px;
+    
     text-align: center;
     background: transparent;
     border: none;
@@ -72,8 +59,28 @@ input
     line-height: 25px;
     padding: 10px 0;
     border-radius: 15px;
+    cursor: pointer;
 }
-	</style>
+#accept:hover
+{
+    color: #fff;
+    background-color: black;
+}
+h2
+{
+    color: #000;
+    
+}
+::placeholder {
+    color:aliceblue;
+    opacity: 0.8; /* Firefox */
+}
+footer{
+	background-color: black;
+	height: auto;
+}
+
+</style>
 
 	 <title>Home</title>
 	 <!--<link href="profile.css" rel="stylesheet" type="text/css" />-->
@@ -110,32 +117,30 @@ input
 		 </div>
 
 		 <div class="signup">
-				<form action="store_values.php" method="POST">
-			    <h2 style="color: #fff;">Sign Up</h2>
-			    <input type="text" name="first_name" placeholder="First name" required><br><br>
-			    <input type="text" name="last_name" placeholder="Last name" required><br><br>
-			    <input type="email" name="email" placeholder="Email"required><br><br>
-			    <input type="text" name="Username" placeholder="Username" required><br><br>
-			    <input type="password" name="password" placeholder="Password" required><br><br> 
-				<label for="gender" id="label">Gender	</label>
-				<input type="radio" class="data" name="gender" value="male" required="true" checked="true"/>Male
-				<input type="radio" class="data" name="gender" value="female" required="true"/>Female</br></br>
-			    <label for="role" id="label">Role   </label>
-			    <input type="radio" class="data" name="role" value="student" required="true" checked="true"/>Student
-			    <input type="radio" class="data" name="role" value="staff" required="true"/>Staff</br></br>
+				<form action="order.php" method="POST">
+			    <h3 style="color: #fff;">SELECT YOUR PREFERRED ITEMS</h3>
+			    <label for="largepizza" id="label">Large Pizza	</label><br>
+			    <input type="Number" name="largepizza" placeholder="Enter Number of Pizza" ><br><br>
+			    <label for="mediumpizza" id="label">Medium Pizza	</label><br>
+			    <input type="Number" name="mediumpizza" placeholder="Enter Number of Pizza" ><br><br>
+			    <label for="smallpizza" id="label">Small Pizza	</label><br>
+			    <input type="Number" name="smallpizza" placeholder="Enter Number of Pizza" ><br><br>
 
-				</br>
-				<label for="dob" id="label">Date of Birth	</label>
-				<input type="date" class="data" name="dobtime" required="true"/></br></br>
+			    <h3 style="color: #fff;">EXTRA TOPPINGS</h3>
+				<input type="radio" class="data" name="gender" value="Meat" />Meat</br><br>
+				<input type="radio" class="data" name="gender" value="Vegetables" />Vegetables</br><br>
 
-			    <input type="password" name="secret_word" placeholder="Secret Word" required><br><br>   
-			    
-			    <input type="submit" id="accept" value="Register" /><!--onclick=""--><br><br>
+
+			    <input type="submit" id="accept" value="Order" /><!--onclick=""--><br><br>
 			        
-			        Already have account?<a href="Loginform.html" style="text-decoration: none; font-family: 'Play', sans-serif; color: yellow;">&nbsp;Log In</a>
+			   
 			    </form>
-    
-    </div>
+
+    	</div>
+    <footer>
+		<p>Copyrights reserved</p>
+		<p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a>.</p>
+	</footer>
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
