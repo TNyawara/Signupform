@@ -10,5 +10,6 @@ $ses_sql = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($ses_sql); 
 $login_session = "First_Name: " . $row["First_Name"]. "\n Last_Name: " . $row["Last_ Name"]."\n Email: " . $row["Email"]."\n Username: " . $row["Username"]."\n Gender: " . $row["Gender"]."\n DateOfBirth: " . $row["DOB"]."<br/>";
 
-$login_sessions =   $row["First_Name"]."<br/>";
+$login_sessions =  $row["First_Name"]."<br/>";
+
 ?>
