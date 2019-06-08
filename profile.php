@@ -15,7 +15,7 @@ body
 {
     font-family: Tahoma, Geneva, sans-serif;
     color: #fff;
-    background: url(background.jpg);
+    background: url(profile.jpg);
     background-size: cover;
 }
 .signup
@@ -76,8 +76,8 @@ h2
     opacity: 0.8; /* Firefox */
 }
 footer{
-	background-color: black;
 	height: auto;
+	min-height: 100px;
 }
 
 </style>
