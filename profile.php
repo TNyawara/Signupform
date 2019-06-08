@@ -88,7 +88,7 @@ footer{
 	</head>
 	<body>
 		 <div class="congs">
-		 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				  <a class="navbar-brand" href="#">Dashboard</a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
@@ -98,11 +98,11 @@ footer{
 				    <ul class="navbar-nav mr-auto">
 
 				      <li class="nav-item active">
-				        <a class="nav-link" href="#">Order  <span class="sr-only">(current)</span></a>
+				        <a class="nav-link" href="">Order  <span class="sr-only">(current)</span></a>
 				      </li>
 
 				      <li class="nav-item active">
-				        <a class="nav-link" href="#">Welcome <?php echo $login_sessions;?></a>
+				        <a class="nav-link" href="">Welcome <?php echo $login_sessions;?></a>
 				      </li>
 
 				      <li class="nav-item active">
@@ -137,10 +137,17 @@ footer{
 			    </form>
 
     	</div>
-    <footer>
-		<p>Copyrights reserved</p>
-		<p>Contact information: <a href="mailto:lester.abiniza@strathmore.edu">lester.abiniza@strathmore.edu</a>.</p>
-	</footer>
+		<!-- Footer -->
+		<footer class="page-footer font-small blue">
+
+		  <!-- Copyright -->
+		  <div class="footer-copyright text-center py-3">© 2019 Copyright:SpaceJumpers
+		    <p>Contact information: <a href="mailto:lester.abiniza@strathmore.edu">lester.abiniza@strathmore.edu</a>.</p>
+		
+		  </div>
+		  
+		</footer>
+<!-- Footer -->
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
