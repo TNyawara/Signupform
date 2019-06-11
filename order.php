@@ -3,8 +3,7 @@
 	$large = ($_POST["largepizza"]);
   	$small = ($_POST["smallpizza"]);
   	$medium = ($_POST["mediumpizza"]);
-  	 $toppings = "";
-
+  	$toppings = ($_POST["tops"]);
 function totals(){
 	#$GLOBALS['large','small','medium','toppings'];
 	$large = ($_POST["largepizza"]);
@@ -14,7 +13,16 @@ function totals(){
 	return $sum;
 }
 
-$Totalcost = totals();
+if ($toppings == "Meat"){
+
+$Totalcost = totals()+200;
+}
+else if($toppings == "Vegetables"){
+$Totalcost = totals()+100;	
+}
+else{
+$Totalcost = totals();	
+}
 
 /*
 function totals($data) {
@@ -57,6 +65,23 @@ h2
     margin-top: 50px;
     margin-left: 10px;
 }
+#accept
+{
+    border: none;
+    width: 190px;
+    background: white;
+    color: #000;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#accept:hover
+{
+    color: #fff;
+    background-color: black;
+}
 	</style>
 	
 	<body>
@@ -76,6 +101,9 @@ h2
 			echo "Ksh";
 			echo $Totalcost;						
 			?>
+			<form action="profile.php" method="POST">
+				<input type="submit" id="accept" value="Done" /><!--onclick=""--><br><br>
+			</form>
 		</div>
 	</body>
 </html>
