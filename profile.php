@@ -119,16 +119,16 @@ footer{
 		 <div class="signup">
 				<form action="order.php" method="POST">
 			    <h3 style="color: #fff;">SELECT YOUR PREFERRED ITEMS</h3>
-			    <label for="largepizza" id="label">Large Pizza	</label><br>
+			    <label for="largepizza" id="label">Large Pizza(Ksh 1100)	</label><br>
 			    <input type="Number" name="largepizza" placeholder="Enter Number of Pizza" ><br><br>
-			    <label for="mediumpizza" id="label">Medium Pizza	</label><br>
+			    <label for="mediumpizza" id="label">Medium Pizza(Ksh 800)	</label><br>
 			    <input type="Number" name="mediumpizza" placeholder="Enter Number of Pizza" ><br><br>
-			    <label for="smallpizza" id="label">Small Pizza	</label><br>
+			    <label for="smallpizza" id="label">Small Pizza(Ksh 550)	</label><br>
 			    <input type="Number" name="smallpizza" placeholder="Enter Number of Pizza" ><br><br>
 
 			    <h3 style="color: #fff;">EXTRA TOPPINGS</h3>
-				<input type="radio" class="data" name="gender" value="Meat" />Meat</br><br>
-				<input type="radio" class="data" name="gender" value="Vegetables" />Vegetables</br><br>
+				<input type="radio" class="data" name="tops" value="Meat" />Meat(Ksh 200)</br><br>
+				<input type="radio" class="data" name="tops" value="Vegetables" />Vegetables (Ksh 100)</br><br>
 
 
 			    <input type="submit" id="accept" value="Order" /><!--onclick=""--><br><br>
