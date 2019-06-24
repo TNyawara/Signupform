@@ -20,9 +20,8 @@ $yourUsername = $conn->real_escape_string($_POST['Username']);
 $yourDateOfBirth = $conn->real_escape_string($_POST['dobtime']);
 $yourSecretword = $conn->real_escape_string($_POST['secret_word']);
 $yourGender = $conn->real_escape_string($_POST['gender']);
-$yourRole = $conn->real_escape_string($_POST['role']);
 #$sql = "INSERT INTO trial1 (Name, Email) VALUES ('".$yourFirstName."', '".$yourEmail."')";
-$sql = "INSERT INTO `registerform`(`First_Name`, `Last_ Name`, `Email`, `Username`, `Password`, `Gender`, `DOB`, `Secret_word`, `Role`) VALUES ('".$yourFirstName."', '".$yourLastName."','".$yourEmail."', '".$yourUsername."','".$yourPassword."', '".$yourGender."','".$yourDateOfBirth."', '".$yourSecretword."', '".$yourRole."')";
+$sql = "INSERT INTO `registerform`(`First_Name`, `Last_ Name`, `Email`, `Username`, `Password`, `Gender`, `DOB`, `Secret_word`) VALUES ('".$yourFirstName."', '".$yourLastName."','".$yourEmail."', '".$yourUsername."','".$yourPassword."', '".$yourGender."','".$yourDateOfBirth."', '".$yourSecretword."')";
 
 if ($conn->query($sql) === TRUE) {
     #echo "Registration Complete";
