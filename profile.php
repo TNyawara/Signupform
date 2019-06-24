@@ -8,35 +8,48 @@ if(!isset($_SESSION['login_user']) || !isset($_SESSION['login_password'])){
 <!DOCTYPE html>
 <html>
 	<head>
-	
-<style>
+	<style>
 
-body
+		body
 {
-    font-family: Tahoma, Geneva, sans-serif;
-    color: #fff;
-    background: url(profile.jpg);
-    background-size: cover;
+    background-color: lightblue;
+    
 }
+a
+{
+    color: yellow;
+    font-family:Tahoma, Geneva, sans-serif;
+    margin-left: 30px;
+}
+.congs
+{
+    background: rgba(44,62,80,0.7);
+    height:auto;
+    width: 100%;
+}
+
 .signup
 {
-	
-    color: yellow;
     background:rgba(44, 62, 80, 0.7);
-	width:100%;
-	height:auto;
-	
-	
+    padding:40px;
+    width:270px;
+    margin:auto;
+    margin-top:80px;
+    height:auto;
+    min-height:430px;
+    margin-left:180px;
+    margin:0 auto;
+    margin-top:90px;
 }
 form
 {
-    width: 100%;
+    width: 240px;
     text-align: center;
 }
 input
 {
     
-    
+    width: 240px;
     text-align: center;
     background: transparent;
     border: none;
@@ -59,28 +72,8 @@ input
     line-height: 25px;
     padding: 10px 0;
     border-radius: 15px;
-    cursor: pointer;
 }
-#accept:hover
-{
-    color: #fff;
-    background-color: black;
-}
-h2
-{
-    color: #000;
-    
-}
-::placeholder {
-    color:aliceblue;
-    opacity: 0.8; /* Firefox */
-}
-footer{
-	height: auto;
-	min-height: 100px;
-}
-
-</style>
+	</style>
 
 	 <title>Home</title>
 	 <!--<link href="profile.css" rel="stylesheet" type="text/css" />-->
@@ -88,7 +81,7 @@ footer{
 	</head>
 	<body>
 		 <div class="congs">
-		 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				  <a class="navbar-brand" href="#">Dashboard</a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
@@ -98,11 +91,11 @@ footer{
 				    <ul class="navbar-nav mr-auto">
 
 				      <li class="nav-item active">
-				        <a class="nav-link" href="">Order  <span class="sr-only">(current)</span></a>
+				        <a class="nav-link" href="#">Order  <span class="sr-only">(current)</span></a>
 				      </li>
 
 				      <li class="nav-item active">
-				        <a class="nav-link" href="">Welcome <?php echo $login_sessions;?></a>
+				        <a class="nav-link" href="#">Welcome <?php echo $login_sessions;?></a>
 				      </li>
 
 				      <li class="nav-item active">
@@ -117,45 +110,32 @@ footer{
 		 </div>
 
 		 <div class="signup">
-				<form action="order.php" method="POST">
-			    <h3 style="color: #fff;">SELECT YOUR PREFERRED ITEMS</h3>
-			    <label for="largepizza" id="label">Large Pizza(Ksh 1100)	</label><br>
-			    <input type="Number" name="largepizza" placeholder="0" ><br><br>
-			    <label for="mediumpizza" id="label">Medium Pizza(Ksh 800)	</label><br>
-			    <input type="Number" name="mediumpizza" placeholder="0" ><br><br>
-			    <label for="smallpizza" id="label">Small Pizza(Ksh 550)	</label><br>
-			    <input type="Number" name="smallpizza" placeholder="0" ><br><br>
+				<form action="store_values.php" method="POST">
+			    <h2 style="color: #fff;">Sign Up</h2>
+			    <input type="text" name="first_name" placeholder="First name" required><br><br>
+			    <input type="text" name="last_name" placeholder="Last name" required><br><br>
+			    <input type="email" name="email" placeholder="Email"required><br><br>
+			    <input type="text" name="Username" placeholder="Username" required><br><br>
+			    <input type="password" name="password" placeholder="Password" required><br><br> 
+				<label for="gender" id="label">Gender	</label>
+				<input type="radio" class="data" name="gender" value="male" required="true" checked="true"/>Male
+				<input type="radio" class="data" name="gender" value="female" required="true"/>Female</br></br>
+			    <label for="role" id="label">Role   </label>
+			    <input type="radio" class="data" name="role" value="student" required="true" checked="true"/>Student
+			    <input type="radio" class="data" name="role" value="staff" required="true"/>Staff</br></br>
 
-			    <h3 style="color: #fff;">EXTRA TOPPINGS</h3>
-				<input type="radio" class="data" name="tops" value="Meat" />Meat(Ksh 200)</br><br>
-				<input type="radio" class="data" name="tops" value="Vegetables" />Vegetables (Ksh 100)</br><br>
+				</br>
+				<label for="dob" id="label">Date of Birth	</label>
+				<input type="date" class="data" name="dobtime" required="true"/></br></br>
 
-				<input type="radio" class="data" name="tops" value="Notops" />No Toppings(Ksh 0)</br><br>
-
-				<h3 style="color: #fff;">LEAVE DONATION</h3>
-				<input type="checkbox" class="don" name="donation" value="donation" />Donation</br>
-				<input type="Number" class="don" name="donations" value="donations" placeholder="amount" /></br><br>
-
-
-			    <input type="submit" id="accept" value="Order" /><!--onclick=""--><br><br>
+			    <input type="password" name="secret_word" placeholder="Secret Word" required><br><br>   
+			    
+			    <input type="submit" id="accept" value="Register" /><!--onclick=""--><br><br>
 			        
-			   
+			        Already have account?<a href="Loginform.html" style="text-decoration: none; font-family: 'Play', sans-serif; color: yellow;">&nbsp;Log In</a>
 			    </form>
-
-    	</div>
-		<!-- Footer -->
-		<footer class="page-footer font-small blue">
-
-		  <!-- Copyright -->
-
-		  <div  class="footer-copyright text-center py-3">© 2019 Copyright:SpaceJumpers
-
-		    <p>Contact information: <a href="mailto:lester.abiniza@strathmore.edu">lester.abiniza@strathmore.edu</a>.</p>
-		
-		  </div>
-		  
-		</footer>
-<!-- Footer -->
+    
+    </div>
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
