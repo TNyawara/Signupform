@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <?php
 // define variables and set to empty values
 	$large = ($_POST["largepizza"]);
@@ -107,7 +107,7 @@ h2
 			</form>
 		</div>
 	</body>
-=======
+
 <?php
 // define variables and set to empty values
 	$large = ($_POST["largepizza"]);
@@ -230,5 +230,5 @@ h2
 			</form>
 		</div>
 	</body>
->>>>>>> master
+
 </html>
