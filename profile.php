@@ -129,6 +129,14 @@ footer{
 			    <h3 style="color: #fff;">EXTRA TOPPINGS</h3>
 				<input type="radio" class="data" name="tops" value="Meat" />Meat(Ksh 200)</br><br>
 				<input type="radio" class="data" name="tops" value="Vegetables" />Vegetables (Ksh 100)</br><br>
+<<<<<<< HEAD
+=======
+				<input type="radio" class="data" name="tops" value="Notops" />No Toppings(Ksh 0)</br><br>
+
+				<h3 style="color: #fff;">LEAVE DONATION</h3>
+				<input type="checkbox" class="don" name="donation" value="donation" />Donation</br>
+				<input type="Number" class="don" name="donations" value="donations" placeholder="amount" /></br><br>
+>>>>>>> master
 
 
 			    <input type="submit" id="accept" value="Order" /><!--onclick=""--><br><br>
@@ -141,7 +149,11 @@ footer{
 		<footer class="page-footer font-small blue">
 
 		  <!-- Copyright -->
+<<<<<<< HEAD
 		  <div class="footer-copyright text-center py-3">© 2019 Copyright:SpaceJumpers
+=======
+		  <div  class="footer-copyright text-center py-3">© 2019 Copyright:SpaceJumpers
+>>>>>>> master
 		    <p>Contact information: <a href="mailto:lester.abiniza@strathmore.edu">lester.abiniza@strathmore.edu</a>.</p>
 		
 		  </div>
