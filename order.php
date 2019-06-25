@@ -42,6 +42,17 @@ function totals($data) {
 
 <?php
 
+#function to connect to the database
+function connect(){
+		$dbserver = "localhost";
+		$dbuser = "root";
+		$dbpass = "";
+		$dbname = "pizza_system";
+		$link  = mysqli_connect($dbserver,$dbuser,$dbpass,$dbname) or die("Could not connect");
+		return $link;
+	}
+
+
 #function to fetch data from sql
 function getData($sql){
 
@@ -53,6 +64,8 @@ function getData($sql){
 		}
 		return $rows;
 	}
+
+	
 #function to fetch last id entered to database
 	function setData($sql){
 		
