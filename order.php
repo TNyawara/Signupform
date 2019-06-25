@@ -40,6 +40,36 @@ function totals($data) {
 }*/
 ?>
 
+<?php
+
+#function to fetch data from sql
+function getData($sql){
+
+		$link = connect();
+		$result = mysqli_query($link,$sql);
+		$rows = array();
+		while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+			$rows[] = $row;
+		}
+		return $rows;
+	}
+#function to fetch last id entered to database
+	function setData($sql){
+		
+		$link = connect();
+
+		if(mysqli_query($link,$sql)){
+			$last_id = mysqli_insert_id($link);
+			return $last_id;
+		}else{
+			return false;
+		}
+
+
+	}
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
